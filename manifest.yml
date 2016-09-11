@@ -1,0 +1,6 @@
+---
+instances: 1
+memory: 512M
+applications:
+- name: cf-env-boot
+  path: target/cf-env-boot-0.0.1-SNAPSHOT.jar

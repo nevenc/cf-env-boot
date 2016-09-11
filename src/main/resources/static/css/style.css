@@ -1,0 +1,13 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.my-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.monospaced {
+    font-family: 'DejaVu Sans Mono', monospace;
+}

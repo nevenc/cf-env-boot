@@ -39,6 +39,8 @@
             <li role="presentation" th:classappend="${#httpServletRequest.getRequestURI().startsWith('/headers-info') ? 'active':''}"><a href="/headers-info">Headers Info</a></li>
             <li role="presentation" th:classappend="${#httpServletRequest.getRequestURI().startsWith('/system-environment') ? 'active':''}"><a href="/system-environment">System Environment</a></li>
             <li role="presentation" th:classappend="${#httpServletRequest.getRequestURI().startsWith('/environment') ? 'active':''}"><a href="/environment">Java Environment</a></li>
+            <li role="presentation" th:if="${@environment.acceptsProfiles('cloud')}" th:classappend="${#httpServletRequest.getRequestURI().startsWith('/vcap-application') ? 'active':''}"><a href="/vcap-application">VCAP_APPLICATION</a></li>
+            <li role="presentation" th:if="${@environment.acceptsProfiles('cloud')}" th:classappend="${#httpServletRequest.getRequestURI().startsWith('/vcap-services') ? 'active':''}"><a href="/vcap-services">VCAP_SERVICES</a></li>
         </ul>
         <br/>
     </div>
@@ -60,6 +62,7 @@
             </div>
         </div>
     </div>
+
 </div><!-- /.container -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
